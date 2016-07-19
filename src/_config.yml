@@ -1,0 +1,22 @@
+#Jekyll
+title:          Jekyll-Bootstrap
+name:
+url:
+destination:    ../dist
+permalink:      "/:slug/"
+paginate:       10
+year:           2016
+
+#Assets
+sass:
+    sass_dir:   _sass
+    style:      :compressed
+
+#Gems
+gems:           [jekyll-paginate]
+
+#Include
+include:        ['_pages']
+
+#Exclude
+exclude:        ['js/bootstrap/', 'js/scripts/', 'js/jekyll-bootstrap.js', 'js/bootstrap.js']
