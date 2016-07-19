@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <a class="navbar-brand" href="/">Total Possession Soccer</a>
+    <div class="collapse navbar-collapse menu_style">
+      <ul class="nav navbar-nav navbar-right">
+      {% for nav in site.data.top-nav %}
+        {% if nav.subcategories != null %}
+        <li class="dropdown">
+          <a href="{{ nav.href }}" class="dropdown-toggle" data-toggle="dropdown">
+            {{ nav.title }}
+          </a>
+          <ul class="dropdown-menu">
+            {% for subcategory in nav.subcategories %}
+            {% if subcategory.subhref contains 'http' or subcategory.subhref contains 'contact' %}
+            <li>
+              <a href="{{ subcategory.subhref }}">
+                {{ subcategory.subtitle }}
+              </a>
+            </li>
+            {% else %}
+            <li>
+              <a href="{{ nav.href }}/{{ subcategory.subhref | remove_first: "/" }}">
+                {{ subcategory.subtitle }}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        {% else %}
+        <li>
+          <a href="{{ nav.href }}">{{ nav.title }}</a>
+        {% endif %}
+        </li>
+        {% capture length %}{{ forloop.length }}{% endcapture %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

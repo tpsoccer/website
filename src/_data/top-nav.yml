@@ -1,0 +1,38 @@
+- title: "Classes"
+  href: "/#"
+  subcategories:
+    - subtitle: "Sub Page"
+      subhref: "/#"
+    - subtitle: "Sub Page"
+      subhref: "/#"
+    - subtitle: "Sub Page"
+      subhref: "/#"
+- title: "Schedule"
+  href: "/#"
+  subcategories:
+    - subtitle: "Sub Page"
+      subhref: "/#"
+    - subtitle: "Sub Page"
+      subhref: "/#"
+    - subtitle: "Sub Page"
+      subhref: "/#"
+
+- title: "About"
+  href: "/#"
+  subcategories:
+  - subtitle: "Sub Page"
+    subhref: "/#"
+  - subtitle: "Sub Page"
+    subhref: "/#"
+  - subtitle: "Sub Page"
+    subhref: "/#"
+
+- title: "555-555-5555"
+  href: "/#"
+  subcategories:
+  - subtitle: "Sub Page"
+    subhref: "/#"
+  - subtitle: "Sub Page"
+    subhref: "/#"
+  - subtitle: "Sub Page"
+    subhref: "/#"

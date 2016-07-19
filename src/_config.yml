@@ -1,19 +1,15 @@
 #Jekyll
-title:          Jekyll-Bootstrap
+title:          Total Possession Soccer
 name:
 url:
 destination:    ../dist
 permalink:      "/:slug/"
-paginate:       10
 year:           2016
 
 #Assets
 sass:
     sass_dir:   _sass
     style:      :compressed
-
-#Gems
-gems:           [jekyll-paginate]
 
 #Include
 include:        ['_pages']

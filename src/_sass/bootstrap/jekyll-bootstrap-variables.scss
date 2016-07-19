@@ -27,9 +27,11 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+// $body-bg:               #fff !default;
+$body-bg:               $tps-blue !default;
+
 //** Fix for sticky nav height issue
-$body-sticky-nav-fix:   70px;
+$body-sticky-nav-fix:   50px;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -45,7 +47,8 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Raleway", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -372,11 +375,13 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+// $navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-bg:                $tps-blue !default;
+$navbar-default-border:            $tps-blue !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
+// $navbar-default-link-color:                #777 !default;
+$navbar-default-link-color:                $tps-white !default;
 $navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
