@@ -93,6 +93,11 @@ a.btn {
   @include button-variant($tps-white, $tps-blue, $tps-yellow);
 }
 
+// TPS Gray
+.btn-tps-gray {
+  @include button-variant($tps-white, $tps-gray, $tps-gray);
+}
+
 
 // Link buttons
 // -------------------------

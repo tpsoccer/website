@@ -26,11 +26,20 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $tps-white;
+  img {
+    border: 2px solid $tps-yellow;
+  }
 }
 
 .main {
-  height: 600px;
+  // height: 600px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $tps-white;
+
+  .panel {
+
+  }
 }
 
 footer {
