@@ -1,0 +1,15 @@
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  li {
+    a {
+      color: #fff;
+      &:hover {
+        color: darken($tps-white, 10%);
+      }
+    }
+  }
+  p {
+    color: $tps-white;
+  }
+}

@@ -384,7 +384,7 @@ $navbar-default-border:            $tps-blue !default;
 // Navbar links
 // $navbar-default-link-color:                #777 !default;
 $navbar-default-link-color:                $tps-white !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-hover-color:          darken($tps-white, 10%);
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;

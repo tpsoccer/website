@@ -28,11 +28,13 @@
 
 // Components
 @import "bootstrap/component-animations";
-@import "bootstrap/dropdowns";
+// @import "bootstrap/dropdowns";
+@import "bootstrap/jekyll-bootstrap-dropdowns";
 @import "bootstrap/button-groups";
 @import "bootstrap/input-groups";
 @import "bootstrap/navs";
-@import "bootstrap/navbar";
+// @import "bootstrap/navbar";
+@import "bootstrap/jekyll-bootstrap-navbar";
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
 @import "bootstrap/pager";
