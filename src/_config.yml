@@ -1,6 +1,6 @@
 #Jekyll
 title:          Total Possession Soccer
-name:           TPS
+name:           Total Possession Soccer
 url:
 destination:    ../dist
 permalink:      "/:slug/"
