@@ -1,17 +1,11 @@
-- title: "Classes"
-  href: "/#"
-  subcategories:
-    - subtitle: "Sub Page"
-      subhref: "/#"
-    - subtitle: "Sub Page"
-      subhref: "/#"
-    - subtitle: "Sub Page"
-      subhref: "/#"
-- title: "Schedule"
-  href: "/#"
-
 - title: "About"
-  href: "/#"
+  href: "#about"
+
+- title: "Classes"
+  href: "#classes"
+
+- title: "Testimonial"
+  href: "#testimonial"
 
 - title: "Contact"
-  href: "/contact"
+  href: "#contact"

@@ -1,9 +1,8 @@
 <footer>
   <ul class="list-inline list-unstyled text-center">
-    <li><a href="#">Classes</a></li>
-    <li><a href="#">Schedule</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    {% for nav in site.data.top-nav %}
+    <li><a href="{{ nav.href }}">{{ nav.title }}</a></li>
+    {% endfor %}
   </ul>
   <p class="text-center">&copy; 2016 TotalPossessionSoccer.com<br>All Rights Reserved</p>
 </footer>

@@ -1,0 +1,23 @@
+.hero {
+  height: 600px;
+  background-image: url(/img/1600-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 500px rgba(0, 0, 0, .45);
+}
+
+.hero-txt {
+  position: relative;
+  top: 240px;
+  h1 {
+    margin-bottom: 20px;
+    font-size: 46px;
+    color: #fff;
+  }
+  h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 24px;
+  }
+}

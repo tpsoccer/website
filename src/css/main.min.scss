@@ -2,6 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "variables.scss";
-@import "_bootstrap.scss";
-@import "custom.scss";
+@import "general.scss";
+@import "hero.scss";
+@import "panels.scss";
+@import "calendar-form.scss";
 @import "footer.scss";

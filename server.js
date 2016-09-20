@@ -1,11 +1,13 @@
-var express = require ('express');
+'use strict';
 
-var server = express();
+const express = require ('express');
+const server  = express();
+const port    = 7000;
+
 server.use(express.static(__dirname + '/dist', {
   extensions: ['html']
 }));
 
-var port = 7000;
 server.listen(port, function() {
-  console.log('Server listening on port ' + port);
+  console.log(`Server listening on port ${port}... `);
 });
