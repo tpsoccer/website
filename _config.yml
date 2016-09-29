@@ -2,7 +2,7 @@
 title:          Total Possession Soccer
 name:           Total Possession Soccer
 url:
-destination:    ../dist
+destination:    dist
 permalink:      "/:slug/"
 year:           2016
 
@@ -15,4 +15,4 @@ sass:
 include:        ['_pages']
 
 #Exclude
-exclude:        ['js/bootstrap/', 'js/scripts/', 'js/jekyll-bootstrap.js', 'js/bootstrap.js']
+exclude:        ['node_modules', 'gulpfile.js', 'package.json', '_config.yml', 'js/src/', 'img/src/']

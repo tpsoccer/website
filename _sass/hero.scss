@@ -1,6 +1,6 @@
 .hero {
-  height: 600px;
-  background-image: url(/img/1600-hero.jpg);
+  height: 500px;
+  background-image: url('/img/1600-hero.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
 
 .hero-txt {
   position: relative;
-  top: 240px;
+  top: 140px;
   h1 {
     margin-bottom: 20px;
     font-size: 46px;

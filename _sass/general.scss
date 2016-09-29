@@ -1,0 +1,47 @@
+$tps-blue: #1a1d49;
+
+body {
+  padding-top: 50px;
+  background-color: $tps-blue;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 { font-size: 32px; }
+
+p { font-size: 22px; }
+
+li { font-size: 20px; }
+
+a { transition: all 0.2s linear; }
+
+.navbar-default {
+  background-color: $tps-blue;
+  border: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+  &:hover {
+    color: darken(#fff, 15%);
+  }
+}
+
+.navbar-default .navbar-brand {
+  font-size: 20px;
+  color: #fff;
+  &:hover {
+    color: darken(#fff, 15%);
+  }
+}
+
+.btn-cta {
+  color: #fff;
+  border: 2px solid $tps-yellow;
+  background: $tps-blue;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $tps-blue;
+    background: #fff;
+    border: 2px solid #fff;
+  }
+}

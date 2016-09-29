@@ -1,61 +1,85 @@
 'use strict';
-// Gulp stuff
+
+// Gulp depencencies
 const gulp = require('gulp');
+const maps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const pump = require('pump');
 const livereload = require('gulp-livereload');
 const shell = require('gulp-shell');
 const gutil = require('gulp-util');
+const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
 
 // Express server
+const os = require('os');
+const interfaces = os.networkInterfaces();
 const express = require('express');
 const server = express();
 const port = 3000;
 
-// Flag toggles server "on" after initial Gulp default
-let serverInit = false;
-
-// Concat all JS to 'src/js/main.js'
-// If any libraries are used, they will need to be handled separately
-gulp.task('concat-js', () => {
-  return gulp.src(['./src/js/**/*.js', '!./src/js/main.js', '!./src/js/main.min.js'])
-  .pipe(concat('main.js'))
-  .pipe(gulp.dest('./src/js'))
+// JavaScript asset pipeline
+gulp.task('javascript', () => {
+  return gulp.src([
+    './js/src/**/*.js',
+    '!./js/app.js',
+    '!./js/app.min.js',
+    '!./js/libraries/**/*.js',
+    '!./js/maps/**/*.js'
+  ])
+  .pipe(babel({
+    presets: ['es2015']
+  }))
+  .pipe(concat('app.min.js'))
+  .pipe(gulp.dest('./js'))
+  .pipe(maps.init())
+  .pipe(uglify().on('error', gutil.log))
+  .pipe(maps.write('./'))
+  .pipe(gulp.dest('./js'))
   .pipe(livereload());
 });
 
-// Minify all JS to 'src/js/main.min.js'
-// If any libraries are used, they will need to be handled separately
-gulp.task('minify-js', (cb) => {
-  pump([
-    gulp.src('./src/js/main.js')
-    .pipe(rename({suffix: '.min'})),
-    uglify(),
-    gulp.dest('./src/js')
-    .pipe(livereload())
-    ],
-  cb);
-});
+// // Image asset pipeline
+// gulp.task('image', () => {
+//   return gulp.src('./src/img/src/*')
+//   .pipe(imagemin([
+//     imageminMozjpeg({
+//       quality: 60
+//     })
+//   ]).on('error', gutil.log))
+//   .pipe(gulp.dest('./src/img'));
+// });
 
 // Build Jekyll
 gulp.task('build', () => {
   return gulp.src('', { read: false })
-  .pipe(shell(['cd src && jekyll build']))
+  .pipe(shell(['jekyll build']).on('error', gutil.log))
   .pipe(livereload());
 });
 
-// Default "gulp" task for Express server, watching, livereload
-// -- basically everything listed above
-gulp.task('default', ['build'], () => {
-  if (!serverInit) {
-    server.use(express.static(__dirname + '/dist/'));
-    server.listen(port, () => gutil.log(`Server listening on port ${port}... `));
-    serverInit = true;
+// Express server
+gulp.task('server', () => {
+  let addresses = [];
+  for (let i in interfaces) {
+    for (let n in interfaces[i]) {
+      let address = interfaces[i][n];
+      if (address.family === 'IPv4' && !address.internal) {
+        addresses.push(address.address);
+      }
+    }
   }
+  server.use(express.static(__dirname + '/dist/'));
+  server.listen(port, () => {
+    for (let i = 0; i < addresses.length; i++) {
+      gutil.log(`Server listening at ${gutil.colors.white(`${addresses[i]}:${port}`)}`);
+    }
+  });
   livereload.listen();
-  gulp.watch('./src/js/**/*.js', ['concat-js']);
-  gulp.watch('./src/js/**/*.js', ['minify-js']);
-  gulp.watch(['./src/**/**', '!./src/js/**/*.js'], ['build']);
+});
+
+// Default "gulp" task for server, watching, livereload -- basically everything listed above
+gulp.task('default', ['build', 'server'], () => {
+  gulp.watch(['js/src/**/*'], ['javascript', 'build']);
+  gulp.watch(['**/*', '!js/src/**/*'], ['build']);
 });
