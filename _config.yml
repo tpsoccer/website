@@ -11,8 +11,5 @@ sass:
     sass_dir:   _sass
     style:      :compressed
 
-#Include
-include:        ['_pages']
-
 #Exclude
 exclude:        ['node_modules', 'gulpfile.js', 'package.json', '_config.yml', 'js/src/', 'img/src/']
