@@ -81,5 +81,5 @@ gulp.task('server', () => {
 // Default "gulp" task for server, watching, livereload -- basically everything listed above
 gulp.task('default', ['build', 'server'], () => {
   gulp.watch(['js/src/**/*'], ['javascript', 'build']);
-  gulp.watch(['**/*', '!js/src/**/*'], ['build']);
+  gulp.watch(['**/*', '!js/src/**/*', '!node_modules'], ['build']);
 });

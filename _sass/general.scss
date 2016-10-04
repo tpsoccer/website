@@ -3,14 +3,43 @@ $tps-blue: #1a1d49;
 body {
   padding-top: 50px;
   background-color: $tps-blue;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-h3 { font-size: 32px; }
+h1 {
+  font-size: 32px;
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
 
-p { font-size: 22px; }
+h2 {
+  font-size: 32px;
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
 
-li { font-size: 20px; }
+h3 {
+  font-size: 32px;
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-size: 22px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+li {
+  font-size: 22px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
 
 a { transition: all 0.2s linear; }
 
@@ -45,3 +74,58 @@ a { transition: all 0.2s linear; }
     border: 2px solid #fff;
   }
 }
+
+
+.form-message {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 10px;
+}
+.error {
+  h4 {
+    color: #a94442;
+  }
+}
+.success {
+  h4 {
+    color: #3c763d;
+  }
+}
+
+
+// Text Helpers
+@media (max-width: 767px) {
+  .text-xs-left { text-align: left; }
+  .text-xs-right { text-align: right; }
+  .text-xs-center { text-align: center; }
+  .text-xs-justify { text-align: justify; }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
+}
+
+
+// @media (min-width: 768px) {
+//   .text-sm-left { text-align: left; }
+//   .text-sm-right { text-align: right; }
+//   .text-sm-center { text-align: center; }
+//   .text-sm-justify { text-align: justify; }
+// }
+//
+// @media (min-width: 992px) {
+//   .text-md-left { text-align: left; }
+//   .text-md-right { text-align: right; }
+//   .text-md-center { text-align: center; }
+//   .text-md-justify { text-align: justify; }
+// }
+//
+// @media (min-width: 1200px) {
+//  .text-lg-left { text-align: left; }
+//  .text-lg-right { text-align: right; }
+//  .text-lg-center { text-align: center; }
+//  .text-lg-justify { text-align: justify; }
+// }
