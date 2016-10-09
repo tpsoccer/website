@@ -63,6 +63,17 @@ a { transition: all 0.2s linear; }
   }
 }
 
+.navbar-default .navbar-toggle {
+  border-color: $tps-blue;
+  &:hover {
+    background-color: $tps-blue;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
 .btn-cta {
   color: #fff;
   border: 2px solid $tps-yellow;
