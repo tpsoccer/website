@@ -1,4 +1,4 @@
-$tps-blue: #1a1d49;
+// $tps-blue: #1a1d49;
 
 body {
   padding-top: 50px;
@@ -72,6 +72,18 @@ a { transition: all 0.2s linear; }
     color: $tps-blue;
     background: #fff;
     border: 2px solid #fff;
+  }
+}
+
+.btn-form {
+  color: #fff;
+  border: 2px solid $tps-blue;
+  background: $tps-blue;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $tps-blue;
+    border: 2px solid $tps-blue;
+    background: #fff;
   }
 }
 
