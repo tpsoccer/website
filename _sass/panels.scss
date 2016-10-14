@@ -7,31 +7,18 @@
   }
 }
 
-.about {
-  background-color: #fff;
-  img {
-    max-height: 320px;
-  }
-}
-
 .logo {
   padding-top: 20px;
+  max-height: 320px;
 }
 
-.coaching {
+.white {
   background-color: #fff;
 }
 
-.team-training {
+.gray {
   background-color: $tps-gray;
   color: #fff;
-
-}
-
-.game-day {
-  background-color: $tps-gray;
-  color: #fff;
-
 }
 
 .cta01 {
@@ -48,24 +35,6 @@
   color: #fff;
 }
 
-.private-lessons {
-  background-color: $tps-gray;
-  color: #fff;
-}
-
-.tps-elite {
-  background-color: $tps-gray;
-  color: #fff;
-}
-
-.gallery {
-  background-color: #fff;
-}
-
-.summer-camps {
-  background-color: #fff;
-}
-
 .cta02 {
   padding-top: 140px;
   padding-bottom: 140px;
@@ -78,28 +47,6 @@
   background-size: cover;
   box-shadow: inset 0 0 0 500px rgba(0, 0, 0, .45);
   color: #fff;
-}
-
-.winter-clinics {
-  background-color: #fff;
-}
-
-.personal-fitness {
-  background-color: #fff;
-}
-
-.fit-sit {
-  background-color: $tps-gray;
-  color: #fff;
-
-}
-
-.testimonials {
-  background-color: $tps-gray;
-  color: #fff;
-  @media (max-width: 767px) {
-    display: none;
-  }
 }
 
 .calendar {
