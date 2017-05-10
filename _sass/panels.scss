@@ -19,6 +19,12 @@
 .gray {
   background-color: $tps-gray;
   color: #fff;
+  a {
+    color: #47aaff;
+    &:hover {
+      color: #ccc;
+    }
+  }
 }
 
 .cta01 {
